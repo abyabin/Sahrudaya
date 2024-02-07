@@ -5,8 +5,15 @@ import LoadExternalScript from '../../LoadExternalScript';
 function Admin() {
     
   useEffect(()=>{
-    LoadExternalScript(['adminjs/scripts.js','https://use.fontawesome.com/releases/v6.3.0/js/all.js','https://code.jquery.com/jquery-3.7.0.js','https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js','https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js','https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js','adminjs/tablescript.js']);
-  })
+    LoadExternalScript(['https://use.fontawesome.com/releases/v6.3.0/js/all.js','https://code.jquery.com/jquery-3.7.0.js','https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js','https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js','https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js','adminjs/tablescript.js']);
+  },[])
+  const handletoggle=()=>{
+    const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    if (sidebarToggle) {
+            document.body.classList.toggle('sb-sidenav-toggled');
+            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+    }
+  }
   return (
    
     <div className='sb-nav-fixed text-lg-start body'>
@@ -15,7 +22,7 @@ function Admin() {
             
             <a className="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
             
-            <button className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i className="fa fa-bars"></i></button>
+            <button className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" onClick={handletoggle} href="#!"><i className="fa fa-bars"></i></button>
            
             <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div className="input-group">
@@ -26,7 +33,7 @@ function Admin() {
             
             <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 smi-navbar" >
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="fa fa-user fa-fw"></i></a>
+                    <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true"><i className="fa fa-user fa-fw"></i></a>
                     <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style={{left:'auto',right:0}}>
                         <li><a className="dropdown-item" href="#!">Settings</a></li>
                         <li><a className="dropdown-item" href="#!">Activity Log</a></li>
