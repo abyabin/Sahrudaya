@@ -18,7 +18,7 @@ function Admin() {
    
     <div className='sb-nav-fixed text-lg-start body'>
         
-    <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <nav className="sb-topnav navbar navbar-expand navbar-dark">
             
             <a className="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
             
