@@ -5,6 +5,7 @@ import Main from './main';
 import { useEffect,useState } from 'react';
 import Admin from './components/admin/Admin';
 import Login from './components/login/Login';
+import Counsellor from './components/counsellor/Counsellor';
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
           <Route path='/' element={<Main/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/admin' element={<Admin/>}/>
+          <Route path='/counsellor' element={<Counsellor/>}/>
           </Routes>
 
         )}
