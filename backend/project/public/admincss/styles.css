@@ -99,7 +99,7 @@
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: #e8ecef;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -4167,7 +4167,7 @@ textarea.form-control-lg {
 }
 
 .card {
-  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-y: 3rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
@@ -4220,7 +4220,7 @@ textarea.form-control-lg {
 
 .card-body {
   flex: 1 1 auto;
-  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  padding:15px;
   color: var(--bs-card-color);
 }
 
@@ -10957,6 +10957,7 @@ body {
   margin-right: 0.5rem;
 }
 
+
 .sb-topnav {
   padding-left: 0;
   height: 56px;
@@ -11018,7 +11019,10 @@ body {
   padding: 0.75rem;
   flex-shrink: 0;
 }
-
+.sb-nav-link-icon
+{
+transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
 .sb-sidenav-dark {
   background-color: #2d9c74;
   color: rgba(255, 255, 255, 0.5);
@@ -11031,6 +11035,9 @@ body {
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
   color: rgba(255, 255, 255, 0.5);
+}
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover .sb-nav-link-icon {
+  color: rgba(255, 255, 255, 1);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
   color: rgba(255, 255, 255, 0.5);

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect} from 'react';
-// import './css/styles.css';
 import LoadExternalScript from '../../LoadExternalScript';
 function Counsellor() {
     
@@ -15,9 +14,10 @@ function Counsellor() {
     }
   }
   return (
-   
+    <>
+    <link rel='stylesheet'type='text/css' href='counselcss/styles.css'></link>
     <div className='sb-nav-fixed text-lg-start body'>
-        
+       
     <nav className="sb-topnav navbar navbar-expand navbar-dark ">
             
             <a className="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
@@ -122,7 +122,7 @@ function Counsellor() {
                         </ol>
                         <div className="row">
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-primary text-white mb-4">
+                                <div className={`card bg-primary text-white mb-4`}>
                                     <div className="card-body">Primary Card</div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
@@ -131,7 +131,7 @@ function Counsellor() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-warning text-white mb-4">
+                                <div className={`card bg-warning text-white mb-4 `}>
                                     <div className="card-body">Warning Card</div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
@@ -140,7 +140,7 @@ function Counsellor() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-success text-white mb-4">
+                                <div className={`card bg-primary text-white mb-4 `}>
                                     <div className="card-body">Success Card</div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
@@ -149,7 +149,7 @@ function Counsellor() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-danger text-white mb-4">
+                                <div className={`card bg-danger text-white mb-4`}>
                                     <div className="card-body">Danger Card</div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
@@ -338,6 +338,7 @@ function Counsellor() {
             </div>
         </div>
       </div>
+      </>
   )
 }
 

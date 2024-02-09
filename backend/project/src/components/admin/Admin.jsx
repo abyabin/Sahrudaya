@@ -1,11 +1,13 @@
 import React from 'react'
 import { useEffect} from 'react';
-import './css/styles.css';
+// import '../admin/css/styles.css'
 import LoadExternalScript from '../../LoadExternalScript';
+import PureCounter from "@srexi/purecounterjs";
 function Admin() {
     
   useEffect(()=>{
     LoadExternalScript(['https://use.fontawesome.com/releases/v6.3.0/js/all.js','https://code.jquery.com/jquery-3.7.0.js','https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js','https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js','https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js','adminjs/tablescript.js']);
+    new PureCounter();
   },[])
   const handletoggle=()=>{
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
@@ -15,9 +17,10 @@ function Admin() {
     }
   }
   return (
-   
+    <>
+    <link rel='stylesheet'type='text/css' href='admincss/styles.css'></link>
     <div className='sb-nav-fixed text-lg-start body'>
-        
+         
     <nav className="sb-topnav navbar navbar-expand navbar-dark">
             
             <a className="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
@@ -25,10 +28,10 @@ function Admin() {
             <button className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" onClick={handletoggle} href="#!"><i className="fa fa-bars"></i></button>
            
             <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div className="input-group">
+                {/* <div className="input-group">
                     <input className="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button className="btn btn-primary" id="btnNavbarSearch" type="button"><i className="fa fa-search"></i></button>
-                </div>
+                </div> */}
             </form>
             
             <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 smi-navbar" >
@@ -120,10 +123,14 @@ function Admin() {
                         <ol className="breadcrumb mb-4">
                             <li className="breadcrumb-item active">Dashboard</li>
                         </ol>
-                        <div className="row">
+                        <div className="row" style={{alignItems:'center',justifyContent:'center'}}>
+                            <h1>Centers</h1>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-primary text-white mb-4">
-                                    <div className="card-body">Primary Card</div>
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}} >
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
                                         <div className="small text-white"><i className="fa fa-angle-right"></i></div>
@@ -131,8 +138,11 @@ function Admin() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-warning text-white mb-4">
-                                    <div className="card-body">Warning Card</div>
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
                                         <div className="small text-white"><i className="fa fa-angle-right"></i></div>
@@ -140,8 +150,11 @@ function Admin() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-success text-white mb-4">
-                                    <div className="card-body">Success Card</div>
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
                                         <div className="small text-white"><i className="fa fa-angle-right"></i></div>
@@ -149,8 +162,71 @@ function Admin() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-6">
-                                <div className="card bg-danger text-white mb-4">
-                                    <div className="card-body">Danger Card</div>
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
+                                    <div className="card-footer d-flex align-items-center justify-content-between">
+                                        <a className="small text-white stretched-link" href="#">View Details</a>
+                                        <div className="small text-white"><i className="fa fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-md-6">
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
+                                    <div className="card-footer d-flex align-items-center justify-content-between">
+                                        <a className="small text-white stretched-link" href="#">View Details</a>
+                                        <div className="small text-white"><i className="fa fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-md-6">
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
+                                    <div className="card-footer d-flex align-items-center justify-content-between">
+                                        <a className="small text-white stretched-link" href="#">View Details</a>
+                                        <div className="small text-white"><i className="fa fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-md-6">
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
+                                    <div className="card-footer d-flex align-items-center justify-content-between">
+                                        <a className="small text-white stretched-link" href="#">View Details</a>
+                                        <div className="small text-white"><i className="fa fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-md-6">
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
+                                    <div className="card-footer d-flex align-items-center justify-content-between">
+                                        <a className="small text-white stretched-link" href="#">View Details</a>
+                                        <div className="small text-white"><i className="fa fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-md-6">
+                                <div className="card bg-primary text-white mb-4 " style={{textAlign:'center'}}>
+                                    <div className='d-flex flex-col'>
+                                    <div className="card-body" style={{fontWeight:600,fontSize:'16px',paddingLeft:'2rem'}}>Loaction 1</div>
+                                    <span data-pure-start="0" data-purecounter-end="337" data-pure-duration="1" className="purecounter ms-3 display-6" style={{fontFamily:'Poppins-Regular, sans-serif',fontWeight:600}}></span> 
+                                    </div>
                                     <div className="card-footer d-flex align-items-center justify-content-between">
                                         <a className="small text-white stretched-link" href="#">View Details</a>
                                         <div className="small text-white"><i className="fa fa-angle-right"></i></div>
@@ -338,6 +414,7 @@ function Admin() {
             </div>
         </div>
       </div>
+      </>
   )
 }
 
