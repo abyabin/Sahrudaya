@@ -126,6 +126,7 @@ function Form() {
 	return ( 
 		
         <>
+		<br></br>
 		<div className="card" style={{boxShadow: "10px 8px 0px rgb(42, 38, 38)"}}>
 			<div className="card-body ">
 				  <div className="row">
