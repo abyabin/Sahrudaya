@@ -17,26 +17,26 @@ function Login(){
   LoadExternalScript(['loginvendor/jquery/jquery-3.2.1.min.js','loginjs/main.js']);
   },[])
   
-  const sendDataToDjango = async () => {    
-    if(email!==''){
-      if(password!=='')
-      {
-    let formField = new FormData()
-    formField.append('email',email)
-    formField.append('password',password)
+//   const sendDataToDjango = async () => {    
+//     if(email!==''){
+//       if(password!=='')
+//       {
+//     let formField = new FormData()
+//     formField.append('email',email)
+//     formField.append('password',password)
   
-    await axios({
-      method: 'post',
-      url:'http://127.0.0.1:8000/login/',
-      data: formField
-    }).then(response=>{
-      token=response.data.token;
-      navigate(`/${response.data.type}`,{state:{token}})
+//     await axios({
+//       method: 'post',
+//       url:'http://127.0.0.1:8000/login/',
+//       data: formField
+//     }).then(response=>{
+//       token=response.data.token;
+//       navigate(`/${response.data.type}`,{state:{token}})
         
-      })
-    }
-    } 
-  }
+//       })
+//     }
+//     } 
+//   }
   const handleSubmit=(e)=>{
     e.preventDefault();
     
