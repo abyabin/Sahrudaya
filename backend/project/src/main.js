@@ -8,7 +8,7 @@ const Main=()=>{
     // Simulate a delay to show the loading screen
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the delay as needed
+    }, 1000); // Adjust the delay as needed
 
     // Clean up the timeout to avoid memory leaks
     return () => clearTimeout(timeout);
@@ -20,7 +20,7 @@ const Main=()=>{
           <img src="loading.gif" alt="Loading" />
         </div>
       ) : (
-<Home/>
+      <Home/>
     )}
     
     </div>

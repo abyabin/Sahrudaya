@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap - SB counsellor v7.0.7 (https://startbootstrap.com/template/sb-admin)
+* Start Bootstrap - SB Admin v7.0.7 (https://startbootstrap.com/template/sb-admin)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
 */
@@ -10957,6 +10957,7 @@ body {
   margin-right: 0.5rem;
 }
 
+
 .sb-topnav {
   padding-left: 0;
   height: 56px;
@@ -11018,7 +11019,10 @@ body {
   padding: 0.75rem;
   flex-shrink: 0;
 }
-
+.sb-nav-link-icon
+{
+transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
 .sb-sidenav-dark {
   background-color: #2d9c74;
   color: rgba(255, 255, 255, 0.5);
@@ -11031,6 +11035,9 @@ body {
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
   color: rgba(255, 255, 255, 0.5);
+}
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover .sb-nav-link-icon {
+  color: rgba(255, 255, 255, 1);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
   color: rgba(255, 255, 255, 0.5);

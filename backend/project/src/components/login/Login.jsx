@@ -46,14 +46,14 @@ function Login(){
 		<div className="container-login100">
 			<div className="wrap-login100">
 				<div className="login100-pic p-2 rounded-2 position-relative">
-        <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false}  showIndicators={false} showStatus={false} >
+        {/* <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false}  showIndicators={false} showStatus={false} >
                 
                     <img src={portr} />
       
                     <img src={portr}   />
                     
                     <img src={portr}  />
-        </Carousel>
+        </Carousel> */}
 				</div>
          
         

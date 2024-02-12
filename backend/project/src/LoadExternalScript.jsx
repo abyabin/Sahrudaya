@@ -11,6 +11,7 @@ const LoadExternalScript = (scriptURLS) => {
     
     // Use onload to load the next script in the array
     externalScript.onload = () => {
+      
       loadScript(index + 1);
     };
     

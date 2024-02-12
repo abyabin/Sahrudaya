@@ -6,15 +6,14 @@ import PureCounter from "@srexi/purecounterjs";
 import {Player} from '@lottiefiles/react-lottie-player'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../Home/assets/css/style.css'
-
 import '../Home/assets/bootstrap-icons/bootstrap-icons.css';
-
 import LoadExternalScript from "../../LoadExternalScript";
+import { useNavigate } from "react-router-dom";
 function Home(){
+  const navigate=useNavigate();
      useEffect(() => {
     LoadExternalScript(['js/main.js']);
     AOS.init();
@@ -37,7 +36,7 @@ return(
           <li><a className="nav-link scrollto" href="#hero">Home</a></li>
           <li><a className="nav-link scrollto" href="#services">Services</a></li>
           <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><button className="getstarted scrollto" >Login</button></li>
+          <li><button className="getstarted scrollto" onClick={()=>navigate('/login')}>Login</button></li>
         </ul>
         <i className="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -267,7 +266,7 @@ return(
     </section>
     <section id="clients" className="clients">
 
-      <div className="container" data-aos="fade-up">
+      <div className="container text-center" data-aos="fade-up">
 
         <header className="section-header">
           <h2>Sahrudaya</h2>
